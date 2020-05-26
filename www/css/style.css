@@ -1,2 +1,7 @@
 /**/
-
+.map{
+  z-index: 2;
+}
+.btn{
+  margin-left: 30%;
+}
