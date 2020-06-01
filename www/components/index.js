@@ -1,6 +1,7 @@
 let mode = 'map';
 
 var onSuccess = function(position) {
+  navigator.notification.beep(3);
   alert('Latitude: '          + position.coords.latitude          + '\n' +
         'Longitude: '         + position.coords.longitude         + '\n' );
 };
