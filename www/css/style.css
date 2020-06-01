@@ -1,6 +1,9 @@
 /**/
-.map{
+.containerMap{
   z-index: 2;
+}
+.navbar{
+  height: 8.7vh;
 }
 .btn{
   margin-left: 30%;

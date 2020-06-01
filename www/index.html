@@ -18,14 +18,17 @@
       <a class="navbar-brand" href="#">
         <img src="img/logocps.webp" height="33" class="d-inline-block align-top" alt="logo">
         <button 
+          id="btn"
           class="btn btn-outline-dark" 
-          onclick= "myPosition()"
           type="submit"
+          onclick="navigator.geolocation.getCurrentPosition(onSuccess, onError);"
         >
           Dark/Light
         </button>
       </a>
     </nav>
-    <div class="map" id="map" style="width: 100vw; height: 100vh;"></div>
+    <div class="containerMap">
+      <div class="map" id="map" style="width: 100vw; height: 90vh;"></div>
+    </div>
   </body>
 </html>
