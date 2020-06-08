@@ -1,28 +1,22 @@
 let mode = 'map';
 
 var onSuccess = function(position) {
-  navigator.notification.beep(3);
+  
   alert('Latitude: '          + position.coords.latitude          + '\n' +
         'Longitude: '         + position.coords.longitude         + '\n' );
-};
-function onError(error) {
-    alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n');
-}
-window.onload = function () {
   L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
   var baseLayer = L.mapquest.tileLayer('map');
 
   var map = L.mapquest.map('map', {
-    center: [-24.281809, -46.987543],
+    center: [position.coords.latitude, position.coords.longitude],
     layers: baseLayer,
     zoom: 16,
   });
 
-  L.marker([-24.281809, -46.987543], {
+  L.marker([position.coords.latitude, position.coords.longitude], {
     icon: L.mapquest.icons.marker(),
     draggable: false
-  }).bindPopup('Etec de Peruíbe').addTo(map);
+  }).bindPopup('Meu local').addTo(map);
 
   L.control.layers({
     'Map': baseLayer
@@ -50,4 +44,13 @@ window.onload = function () {
 
     drawnItems.addLayer(layer);
   })
+};
+function onError(error) {
+    navigator.notification.alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
 }
+window.onload = function () {
+  navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  
+}
+
