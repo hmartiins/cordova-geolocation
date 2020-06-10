@@ -6,12 +6,14 @@
   <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="components/index.js"></script>
+  
   <link rel="stylesheet" href="css/style.css">
   <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
   <script src="https://unpkg.com/leaflet-draw@0.4.13/dist/leaflet.draw.js"></script>
   <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
   <link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet-draw@0.4.13/dist/leaflet.draw.css"/>
+
+  <script src="components/index.js"></script>
 </head>
   <body style="border: 0; margin: 0;">
     <nav class="navbar navbar-light bg-light">
@@ -20,8 +22,7 @@
         <button 
           id="btn"
           class="btn btn-outline-dark" 
-          type="submit"
-          onclick="navigator.geolocation.getCurrentPosition(onSuccess, onError);"
+          onclick=""
         >
           Dark/Light
         </button>
