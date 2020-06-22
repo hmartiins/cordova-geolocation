@@ -51,6 +51,5 @@ function onError(error) {
 }
 window.onload = function () {
   navigator.geolocation.getCurrentPosition(onSuccess, onError);
-  
 }
 

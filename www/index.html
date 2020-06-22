@@ -21,10 +21,10 @@
         <img src="img/logocps.webp" height="33" class="d-inline-block align-top" alt="logo">
         <button 
           id="btn"
-          class="btn btn-outline-dark" 
-          onclick=""
+          class="btn btn-outline-dark"
+          onclick="navigator.geolocation.getCurrentPosition(onSuccess, onError);"
         >
-          Dark/Light
+          Minha posição atual
         </button>
       </a>
     </nav>
